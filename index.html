@@ -95,4 +95,5 @@ $('confirmation').addEventListener('cancel',()=>{pendingAction=null;});
 const topics=[...new Set(BANK.map(q=>q.topic))];$('intro-topics').innerHTML=topics.map(topic=>`<div class="topic-row"><span>${esc(topic)}</span><strong>${BANK.filter(q=>q.topic===topic).length}</strong></div>`).join('');
 const restored=load();if(restored){lastOrder=[...restored.order];if(restored.done){state=restored;show('results');renderResults();}else $('continue').hidden=false;}
 </script>
-</body></html>
+</body>
+</html>
